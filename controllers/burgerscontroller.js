@@ -26,12 +26,13 @@ router.post("/burgers/create", function(req, res) {
 //doesnt work
 router.put("/update/:id", function(req, res) {
     burger.updateOne([req.body.devoured], [req.params.id], function() {
-        res.redirect("/burgers");
+        res.redirect('/');
     });
 });
 
-//works
-router.delete("/api/burgers/:id", function(req, res) {
+
+/* router.delete("/delete/:id", function(req, res) 
+{
     var condition = "id = " + req.params.id;
     burger.delete(condition, function(result) {
         if (result.affectedRows == 0) {
@@ -40,6 +41,11 @@ router.delete("/api/burgers/:id", function(req, res) {
             res.status(200).end();
         }
     });
-});
+}); */
 
+router.delete('/delete/:id', function(req, res) {
+    burger.deleteOne([req.params.id], function() {
+        res.redirect('/');
+    });
+});
 module.exports = router;
