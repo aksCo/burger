@@ -10,7 +10,7 @@ const orm = {
 
 
     insertOne: function(table, column, burger_name, cb) {
-        var queryString = 'INSERT INTO' + table + '(' + column + ') VALUES (?)';
+        var queryString = 'INSERT INTO ' + table + '(' + column + ') VALUES (?)';
         connection.query(queryString, [burger_name], function(err, result) {
             if (err) throw err;
             cb(result);
