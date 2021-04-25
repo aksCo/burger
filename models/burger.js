@@ -1,4 +1,5 @@
 var orm = require('../config/orm.js');
+//const { delete } = require('../controllers/burgerscontroller.js');
 
 var burger = {
     all: function(cb) {
@@ -15,7 +16,12 @@ var burger = {
         orm.updateOne("burgers", objColVals, condition, function(res) {
             cb(res);
         });
+    },
+    delete: function(condition, cb) {
+        orm.delete("burgers", condition, function(res) {
+            cb(res);
+        });
     }
-}
+};
 
 module.exports = burger;
