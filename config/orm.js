@@ -7,8 +7,6 @@ const orm = {
             cb(result);
         });
     },
-
-
     insertOne: function(table, column, burger_name, cb) {
         var queryString = 'INSERT INTO ' + table + '(' + column + ') VALUES (?)';
         connection.query(queryString, [burger_name], function(err, result) {

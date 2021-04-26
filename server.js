@@ -1,5 +1,4 @@
 var express = require('express');
-//var methodOverride = require('method-override');
 var bodyParser = require('body-parser');
 var mysql = require('mysql');
 var handlebars = require('express-handlebars');
@@ -8,9 +7,9 @@ var app = express();
 
 
 app.use(express.static(process.cwd() + "/public"));
-app.use(bodyParser.urlencoded({ extended: false }));
-//app.use(methodOverride("_method"));
-app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+
+app.use(express.json());
 var exphbs = require("express-handlebars");
 
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
