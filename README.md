@@ -12,6 +12,5 @@ The design still needs work.
 https://hidden-dawn-98785.herokuapp.com
 
 ## Screenshot
-
-(./public/assets/img/s1.png)
+![Screenshot](public/assets/img/s1.png)
 
