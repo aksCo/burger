@@ -9,7 +9,7 @@ The app works on my browser but not on Heroku. It has been deployed to Heroku.
 The design still needs work.
 
 ## Heroku
-https://hidden-dawn-98785.herokuapp.com
+https://floating-hamlet-93529.herokuapp.com/burgers
 
 ## Screenshot
 ![Screenshot](public/assets/img/s1.png)
